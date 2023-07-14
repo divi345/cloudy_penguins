@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+</head>
+<body>
+	<div class="glassmorphic-box">
+        <div class="container">
+            <div id="brandname">
+                <h2 align="center">Twitter Sentiment Analysis</h2>
+            </div>
+            <hr/>
+            <br/>
+        <h2 align="center">Sentiment Analysis by cloudy penguins</h2>
+        </div>
+
+    <div class="ml-container" align="center">
+        
+       
+			<img src="https://cdn.pixabay.com/photo/2018/06/22/19/03/logo-3491390_960_720.png" alt="Twitter Logo" class="logo">
+            <form action="{{ url_for('predict')}}" method="POST">
+                <p>Enter Your Message Here</p>
+                <input type="text" name="message" class="input-box" style="width: 50%;" placeholder="Type your message here">
+                <br/>
+                <br/>
+                <input type="submit" class="btn-info" value="Predict">
+            </form>
+            <div class="emojis">
+                <span class="emoji">&#128515;</span>
+                <span class="emoji">&#128525;</span>
+                <span class="emoji">&#128512;</span>
+            </div>
+        </div>
+    </div>
+
+</body>
+<style>
+ body {
+    background: rgb(241, 213, 90);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h2 {
+    color: black;
+}
+
+.ml-container {
+    margin-top: 50px;
+}
+
+.glassmorphic-box {
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 10%;
+    max-width: 500px;
+    min-height: 400px;
+    background: rgba( 247, 238, 238, 0.25 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 20px );
+-webkit-backdrop-filter: blur( 20px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+form {
+    margin-top: 20px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    resize: none;
+    border-radius: 5px;
+    border: 1px solid #007bff;
+}
+
+.btn-info {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.logo {
+    width: 180px;
+    height: 100px;
+    margin-top: -40px;
+}
+
+.emojis {
+    margin-top: 20px;
+    font-size: 24px;
+}
+
+.emoji {
+    margin: 0 5px;
+}
+
+</style>
+</html>
